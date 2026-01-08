@@ -1,6 +1,14 @@
 # Joomla 3 EOL Security Fixes 
 This plugin will help you update the files associated with the known security fixes as listed below.
 It will overwrite the files and then auto uninstalls itself again. 
+
+## Version 1.0.9 fixes the below security issues (it also contains all previous versions fixes)
+- [20260102] — Core — XSS vector in the pagebreak plugin (CVE-2025-63083). More info: https://developer.joomla.org/security-centre/1017-20260102-core-xss-vector-in-the-pagebreak-plugin.html
+- [20260101] — Core — Inadequate content filtering for data URLs (CVE-2025-63082). More info: https://developer.joomla.org/security-centre/1016-20260101-core-inadequate-content-filtering-for-data-urls.html
+- [20250401] — Framework — SQL injection in Database package (CVE-2025-25226). More info: https://developer.joomla.org/security-centre/963-20250401-framework-sql-injection-vulnerability-in-quotenamestr-method-of-database-package.html
+- [20250301] — Core — Malicious file uploads via Media Manager (CVE-2025-22213). More info: https://developer.joomla.org/security-centre/961-20250301-core-malicious-file-uploads-via-media-manager.html
+- [20240702] — Core — Lack of escaping in module chrome attributes (CVE-2024-40747). More info: https://developer.joomla.org/security-centre/941-20240702-core-lack-of-escaping-in-module-chrome-attributes.html
+
 ## Version 1.0.8 fixes the below security issues and bugs caused by it. (it also contains all previous versions fixes)
 - [20250103] - Core - Read ACL violation in multiple core views. More info on the vulnerability here: https://developer.joomla.org/security-centre/956-20250103-core-read-acl-violation-in-multiple-core-views.html
 - [20250102] - Core - XSS vector in the id attribute of menu lists. More info on the vulnerability here: https://developer.joomla.org/security-centre/955-20250102-core-xss-vector-in-the-id-attribute-of-menu-lists.html
