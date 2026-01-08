@@ -5,6 +5,7 @@
  *
  * @copyright   (C) 2007 Open Source Matters, Inc. <https://www.joomla.org>
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * Updated January 2026 by N8 Solutions to include EOL security backports.
  */
 
 defined('_JEXEC') or die;
@@ -115,7 +116,10 @@ class MediaControllerFile extends JControllerLegacy
 			// Make the filename safe
 			$file['name'] = JFile::makeSafe($file['name']);
 
-			// --- START 2026 SECURITY PATCH [CVE-2025-22213] ---
+			/**
+			 * SECURITY PATCH: CVE-2025-22213
+			 * Added January 2026 by N8 Solutions
+			 */
 			// Strictly prevent upload of executable PHP or system extensions
 			$ext = strtolower(JFile::getExt($file['name']));
 			$forbidden = array('php', 'phtml', 'php5', 'php7', 'phps', 'shtml', 'pl', 'py', 'cgi', 'asp', 'aspx');
@@ -125,7 +129,7 @@ class MediaControllerFile extends JControllerLegacy
 				JError::raiseWarning(100, JText::_('COM_MEDIA_ERROR_WARNUPLOADTYPE'));
 				return false;
 			}
-			// --- END 2026 SECURITY PATCH ---
+			/** END N8 SOLUTIONS SECURITY PATCH **/
 
 			// We need a url safe name
 			$fileparts = pathinfo(COM_MEDIA_BASE . '/' . $this->folder . '/' . $file['name']);
