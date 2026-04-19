@@ -1,6 +1,10 @@
 # Joomla 3 EOL Security Fixes 
 This plugin will help you update the files associated with the known security fixes as listed below.
-It will overwrite the files and then auto uninstalls itself again. 
+It will overwrite the files and then auto uninstalls itself again.
+
+## Version 1.0.10 fixes the below security issues (it also contains all previous versions fixes)
+- [20260301] — Core — ACL hardening in com_ajax (CVE-2026-21629). More info: https://developer.joomla.org/security-centre/1018-20260301-core-acl-hardening-in-com_ajax.html
+- [20260303] — Core — XSS vector in com_associations comparison view (CVE-2026-21631). More info: https://developer.joomla.org/security-centre/1020-20260303-core-xss-vector-in-com_associations.html
 
 ## Version 1.0.9 fixes the below security issues (it also contains all previous versions fixes)
 - [20260102] — Core — XSS vector in the pagebreak plugin (CVE-2025-63083). More info: https://developer.joomla.org/security-centre/1017-20260102-core-xss-vector-in-the-pagebreak-plugin.html
